@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-  <!--
+<!--
     Licensed to the Apache Software Foundation (ASF) under one or more
     contributor license agreements. See the NOTICE file distributed with
     this work for additional information regarding copyright ownership.
@@ -22,15 +22,9 @@
     <artifactId>accumulo-wikisearch</artifactId>
     <version>1.5.0</version>
   </parent>
-
   <artifactId>wikisearch-ingest</artifactId>
   <name>wikisearch-ingest</name>
-
   <dependencies>
-    <dependency>
-      <groupId>com.google.collections</groupId>
-      <artifactId>google-collections</artifactId>
-    </dependency>
     <dependency>
       <groupId>com.google.protobuf</groupId>
       <artifactId>protobuf-java</artifactId>
@@ -69,7 +63,6 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
-
   <build>
     <plugins>
       <plugin>
@@ -102,4 +95,15 @@
       </plugin>
     </plugins>
   </build>
+  <profiles>
+    <profile>
+      <id>hadoop-1.0</id>
+      <dependencies>
+        <dependency>
+          <groupId>com.google.collections</groupId>
+          <artifactId>google-collections</artifactId>
+        </dependency>
+      </dependencies>
+    </profile>
+  </profiles>
 </project>
