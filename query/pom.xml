@@ -132,20 +132,4 @@
       </plugin>
     </plugins>
   </build>
-  <profiles>
-    <profile>
-      <id>hadoop-1.0</id>
-      <activation>
-        <property>
-          <name>!hadoop.profile</name>
-        </property>
-      </activation>
-      <dependencies>
-        <dependency>
-          <groupId>com.google.collections</groupId>
-          <artifactId>google-collections</artifactId>
-        </dependency>
-      </dependencies>
-    </profile>
-  </profiles>
 </project>
